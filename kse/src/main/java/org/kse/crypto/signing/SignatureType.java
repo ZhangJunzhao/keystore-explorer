@@ -32,6 +32,7 @@ import static org.kse.crypto.digest.DigestType.SHA3_384;
 import static org.kse.crypto.digest.DigestType.SHA3_512;
 import static org.kse.crypto.digest.DigestType.SHA512;
 import static org.kse.crypto.digest.DigestType.SHAKE256;
+import static org.kse.crypto.digest.DigestType.SM3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,6 +77,10 @@ public enum SignatureType {
 	SHA3_256WITHRSAANDMGF1("SHA3-256WITHRSAANDMGF1", id_RSASSA_PSS.getId(), SHA3_256, "SignatureType.Sha3_256WithRsaAndMGF1"),
 	SHA3_384WITHRSAANDMGF1("SHA3-384WITHRSAANDMGF1", id_RSASSA_PSS.getId(), SHA3_384, "SignatureType.Sha3_384WithRsaAndMGF1"),
 	SHA3_512WITHRSAANDMGF1("SHA3-512WITHRSAANDMGF1", id_RSASSA_PSS.getId(), SHA3_512, "SignatureType.Sha3_512WithRsaAndMGF1"),
+
+    // Referring to org.bouncycastle.asn1.gm.GMObjectIdentifiers
+    SHA256_SM2("SHA256withSM2", "1.2.156.10197.1.503", SHA256, "SignatureType.SHA256withSM2"),
+    SM3_SM2("SM3withSM2", "1.2.156.10197.1.501", SM3, "SignatureType.SM3withSM2"),
 
 	// ECDSA
 	SHA1_ECDSA("SHA1withECDSA", "1.2.840.10045.4.1", SHA1, "SignatureType.Sha1WithEcDsa"),
@@ -172,6 +177,9 @@ public enum SignatureType {
 
         signatureTypes.add(ED25519);
         signatureTypes.add(ED448);
+
+        signatureTypes.add(SHA256_SM2);
+        signatureTypes.add(SM3_SM2);
 
         return signatureTypes;
     }

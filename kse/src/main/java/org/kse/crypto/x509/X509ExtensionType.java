@@ -360,6 +360,8 @@ public enum X509ExtensionType {
 	APPLE_INSTALLER_SIGNING("1.2.840.113635.100.6.1.14", "AppleInstallerPackageSigning"),
 	APPLE_DEV_PROGRAM("1.2.840.113635.100.6.2.6", "AppleDevProgram"),
 
+	APPLE_APP_STORE("2.23.146.1.2.2.0", "PermittedEINs"),
+
 	// for letting the user add an arbitrary extension
 	CUSTOM("0", "custom"),
 

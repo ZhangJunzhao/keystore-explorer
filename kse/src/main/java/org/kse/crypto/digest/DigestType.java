@@ -26,6 +26,9 @@ public enum DigestType {
 
     // @formatter:off
 
+    // Referring to org.bouncycastle.asn1.gm.GMObjectIdentifiers
+    SM3("SM3", "1.2.156.10197.1.401", "SM3"),
+
 	MD5("MD5", "1.2.840.113549.2.5", "MD5"),
 
 	RIPEMD160("RIPEMD160", "1.3.36.3.2.1", "RIPEMD-160"),
